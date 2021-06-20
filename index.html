@@ -17,7 +17,7 @@
   
   <!-- Header -->
   <h1 
-    class="container display-4 d-flex justify-content-center align-items-center" 
+    class="display-4 d-flex justify-content-center align-items-center" 
     style="color: white; background-color:#00c2cb; height: 2em"
   >
     Header
@@ -38,10 +38,18 @@
     <img 
       src="image.png" 
       class="img-fluid" 
-      style="max-width: 100%; height: auto"
+      style="max-width: 100%; height: auto; margin-bottom: 10%;"
       alt="Responsive image"
     >
-    <p>Like</p>
+
+    <!-- Like button -->
+    <button 
+      type="button" 
+      class="btn btn-danger col-6 col-lg-4"
+      onclick="alert()"
+    >
+      ♥️ Like | 0
+    </button>
   </div>
 
 
@@ -53,13 +61,54 @@
 
   <!-- Comment section -->
   <div 
-    class="container col-8 d-flex flex-column justify-content-center"
-    style="background-color: white; padding: 5% 10% 5% 10%; margin-bottom: 5%;"
+    class="container col-6 d-flex flex-column justify-content-center"
+    style="background-color: white; padding: 2%; margin-bottom: 1%;"
   >
-    
-    <p>Comments</p>
+    <h6>B-2016</h6>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+    </p>
   </div>
 
+  <div 
+    class="container col-6 d-flex flex-column justify-content-center"
+    style="background-color: white; padding: 2%; margin-bottom: 1%;"
+  >
+    <h6>ErikLover</h6>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    </p>
+  </div>
+
+  <div 
+    class="container col-6 d-flex flex-column justify-content-center"
+    style="background-color: white; padding: 2%; margin-bottom: 1%;"
+  >
+    <h6>Cassi17</h6>
+    <p>
+      Lorem ipsum dolor sit amet !!
+    </p>
+  </div>
+
+  <!-- Comment form -->
+  <div 
+    class="container col-6 d-flex flex-column justify-content-center"
+    style="background-color: white; padding: 2%; margin-bottom: 5%;"
+  >
+    <h4 style="margin-bottom: 5%;">Leave a comment</h4>
+    <form action="/action_page.php" class="was-validated">
+      <div class="form-group">
+        <label for="pwd">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+        
+      </div>
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment" required style="resize: none;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+  </div>
 
 <script src="index.js"></script>
 </body>
