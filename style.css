@@ -1,3 +1,41 @@
 #body {
   background-color: #e0feff;
 }
+
+#header {
+  color: white;
+  background-color: #00c2cb;
+  height: 2em;
+}
+
+#blog-post-section {
+  background-color: white;
+  padding: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#blog-post-paragraph {
+  margin: 5% 0% 5% 0%"
+
+}
+
+#blog-post-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#comment-form-container {
+  background-color: white;
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+#leave-a-comment {
+  margin-bottom: 5%;
+}
+
+#like-text,
+#like-count {
+  padding: 0%;
+}
