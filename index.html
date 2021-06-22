@@ -55,60 +55,32 @@
   </div>
 
 
-  <!-- "Comments" -->
   <h4 class="container col-6 d-flex  align-items-center" >
     Comments
   </h4>
 
 
-  <!-- Comment section -->
-  <div 
-    class="container col-6 d-flex flex-column justify-content-center"
-    style="background-color: white; padding: 2%; margin-bottom: 1%;"
-  >
-    <h6>B-2016</h6>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-    </p>
-  </div>
+  <!-- Published comments -->
+  <div id="published-comments"></div>
 
-  <div 
-    class="container col-6 d-flex flex-column justify-content-center"
-    style="background-color: white; padding: 2%; margin-bottom: 1%;"
-  >
-    <h6>ErikLover</h6>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    </p>
-  </div>
-
-  <div 
-    class="container col-6 d-flex flex-column justify-content-center"
-    style="background-color: white; padding: 2%; margin-bottom: 1%;"
-  >
-    <h6>Cassi17</h6>
-    <p>
-      Lorem ipsum dolor sit amet !!
-    </p>
-  </div>
-
+  
   <!-- Comment form -->
   <div 
     class="container col-6 d-flex flex-column justify-content-center"
     style="background-color: white; padding: 2%; margin-bottom: 5%;"
   >
     <h4 style="margin-bottom: 5%;">Leave a comment</h4>
-    <form action="/action_page.php" class="was-validated">
+    <form id="comment-form">
       <div class="form-group">
         <label for="pwd">Name:</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-        
+        <input id="form-name" type="text" class="form-control" name="name" required>
       </div>
+
       <div class="form-group">
         <label for="comment">Comment:</label>
-        <textarea class="form-control" rows="5" id="comment" required style="resize: none;"></textarea>
+        <textarea id="form-comment" class="form-control" rows="5" name="comment" required style="resize: none;"></textarea>
       </div>
-      <button type="submit" class="btn btn-info">Submit</button>
+      <button id="submit-button" type="submit" class="btn btn-info">Submit</button>
     </form>
   </div>
 
