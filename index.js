@@ -9,25 +9,25 @@ $.get('https://api.paulina.tech/v1/blogposts/93f29652d1e011ebabcf396dbf62158f/li
 if (localStorage.getItem("hasLiked") === "true") {
    // remove outlined heart, add filled heart
    $("#heart").removeClass("fa-heart-o").addClass("fa-heart");
-
-} else {
-  // set up onclick for like button   
-  $("#like-button").click(function () {
-
-  // only allow one like per browser 
-  localStorage.setItem("hasLiked", "true");
-
-  $.post('https://api.paulina.tech/v1/blogposts/93f29652d1e011ebabcf396dbf62158f/likes',
-    function (data) {
-
-      // set updated like count
-      $("#like-count").text(data);
-
-      // remove outlined heart, add filled heart
-      $("#heart").removeClass("fa-heart-o").addClass("fa-heart");
-    });   
-  });
 }
+
+// set up onclick for like button   
+$("#like-button").click(function () {
+  if (localStorage.getItem("hasLiked") !== "true") {
+    // only allow one like per browser 
+    localStorage.setItem("hasLiked", "true");
+    
+    $.post('https://api.paulina.tech/v1/blogposts/93f29652d1e011ebabcf396dbf62158f/likes',
+      function (data) {
+    
+        // set updated like count
+        $("#like-count").text(data);
+    
+        // remove outlined heart, add filled heart
+        $("#heart").removeClass("fa-heart-o").addClass("fa-heart");
+    });   
+  }
+});
 
 
 // load current comments from server
